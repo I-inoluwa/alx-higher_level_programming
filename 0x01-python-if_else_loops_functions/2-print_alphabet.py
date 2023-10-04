@@ -1,3 +1,3 @@
 #!/usr/bin/python3
 for i in range(26):
-    print(f"{(i + 97):c}", end="")
+    print("{:c}".format(i + 97), end="")
