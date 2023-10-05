@@ -9,10 +9,11 @@ def uppercase(str):
         else:
             c = ord(c)
 
+        print("{:c}".format(c), end="")
+
         if (i == len(str) - 1):
             break
-        else:
-            print("{:c}".format(c), end="")
+
         i += 1
 
-    print("{:c}".format(c), end="\n")
+    print("")
