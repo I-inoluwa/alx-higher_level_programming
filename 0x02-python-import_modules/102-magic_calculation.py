@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-import dis
 def magic_calculator(a, b):
     from magic_calculation_102 import add, sub
     if (a < b):
@@ -9,5 +8,3 @@ def magic_calculator(a, b):
         return (c)
 
     return(sub(a,b))
-
-dis.dis(magic_calculator)
