@@ -8,17 +8,17 @@
 
 int is_palindrome(listint_t **head)
 {
-	listint_t *cur = NULL, *pal = NULL, *new = NULL, *fast = NULL;
+	listint_t *cur = NULL, *pal = NULL, *new = NULL;
 
 	if (*head == NULL)
 		return (1);
 
-	cur = *head, fast = *head;
-	while (fast != NULL)
+	cur = *head, pal = *head;
+	while (pal != NULL)
 	{
-		if (fast->next == NULL)
+		if (pal->next == NULL)
 			break;
-		fast = fast->next->next;
+		pal = pal->next->next;
 		cur = cur->next;
 	}
 	while (cur != NULL)
