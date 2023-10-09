@@ -5,5 +5,5 @@ def element_at(my_list, idx):
         if (i == idx):
             return (each)
         i += 1
-    
+
     return(None)
