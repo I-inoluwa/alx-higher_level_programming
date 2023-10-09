@@ -6,4 +6,4 @@ def element_at(my_list, idx):
             return (each)
         i += 1
 
-    return(None)
+    return (None)
