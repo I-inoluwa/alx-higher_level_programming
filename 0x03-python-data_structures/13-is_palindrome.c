@@ -8,12 +8,19 @@
 
 int is_palindrome(listint_t **head)
 {
-	listint_t *cur = NULL, *pal = NULL, *new = NULL;
+	listint_t *cur = NULL, *pal = NULL, *new = NULL, *fast = NULL;
 
 	if (*head == NULL)
 		return (1);
 
-	cur = *head;
+	cur = *head, fast = *head;
+	while (fast != NULL)
+	{
+		if (fast->next == NULL)
+			break;
+		fast = fast->next->next;
+		cur = cur->next;
+	}
 	while (cur != NULL)
 	{
 		pal = malloc(sizeof(listint_t));
@@ -23,17 +30,12 @@ int is_palindrome(listint_t **head)
 		pal->next = NULL;
 
 		cur = cur->next;
-		if (new == NULL)
-		{
-			new = pal;
-			continue;
-		}
-		pal->next = new;
+		if (new != NULL)
+			pal->next = new;
 		new = pal;
 	}
 	cur = *head;
-	pal = new;
-	while (cur != NULL)
+	while (pal != NULL)
 	{
 		if (cur->n != pal->n)
 		{
