@@ -16,10 +16,10 @@ int is_palindrome(listint_t **head)
 	cur = *head, pal = *head;
 	while (pal != NULL)
 	{
+		cur = cur->next;
 		if (pal->next == NULL)
 			break;
 		pal = pal->next->next;
-		cur = cur->next;
 	}
 	while (cur != NULL)
 	{
