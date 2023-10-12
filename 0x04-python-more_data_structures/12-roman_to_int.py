@@ -21,7 +21,8 @@ def roman_to_int(roman_string):
                 track[-1] = cache[each] - track[-1]
             else:
                 track.append(cache[each])
-
-        result = reduce(lambda x, y: x + y, track[1:])
+        result = 0
+        for i in range(1, len(track)):
+            result += track[i]
         return (result)
     return (0)
