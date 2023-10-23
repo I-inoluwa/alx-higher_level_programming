@@ -1,13 +1,12 @@
 #!/usr/bin/python3
-
-def safe_print_list(my_list=[], x=0):
-    if (my_list):
-        for i in range(x):
-            try:
-                print(my_list[i], end="")
-            except (IndexError):
-                print("")
-                return (i)
-        print("")
-        return (i + 1)
-    return (0)
+def magic_calculation(a, b):
+    result = 0
+    for i in range(1, 3):
+        try:
+            if (i > a):
+                raise Exception('Too far')
+            result += (a**b)/i
+        except:
+            result = a + b
+            break
+    return (result)
