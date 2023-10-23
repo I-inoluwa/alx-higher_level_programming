@@ -1,13 +1,11 @@
 #!/usr/bin/python3
+import sys
 
-def safe_print_list(my_list=[], x=0):
-    if (my_list):
-        for i in range(x):
-            try:
-                print(my_list[i], end="")
-            except (IndexError):
-                print("")
-                return (i)
-        print("")
-        return (i + 1)
-    return (0)
+
+def safe_print_integer_err(value):
+    try:
+        print("{:d}".format(value))
+    except Exception as err:
+        sys.stderr.write("Exception: {}\n".format(err))
+        return False
+    return True
