@@ -1,5 +1,5 @@
 #!/usr/bin/python3
 
 class Square:
-    """Represents a square."""
+    """The summary line for a class docstring should fit on one line."""
     pass
