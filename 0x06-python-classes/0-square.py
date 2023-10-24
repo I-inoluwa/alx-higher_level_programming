@@ -1,10 +1,5 @@
 #!/usr/bin/python3
 
 class Square:
-    """
-    Creation of an empty square
-
-    Attributes:
-        None.
-    """
+    """Represents a square."""
     pass
