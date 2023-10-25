@@ -23,3 +23,7 @@ class MagicClass:
         """Derives the circumference from the radius given"""
 
         return ((2 * math.pi) * self._MagicClass__radius)
+
+a = MagicClass(5)
+
+print(a.area())
