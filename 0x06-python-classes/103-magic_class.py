@@ -4,7 +4,11 @@ import math
 
 
 class MagicClass:
-    """MagicClass: Writing a class from its bytecode. Pretty cool"""
+    """MagicClass: Writing a class from its bytecode. Pretty 
+
+    Attributes:
+        radius: Specifies the radius of the MagicObject
+    """
 
     def __init__(self, radius):
         """I have to put in this documentation too.
