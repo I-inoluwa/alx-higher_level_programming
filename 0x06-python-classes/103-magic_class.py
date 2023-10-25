@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+math = __import__("math")
 """Magic class creation. The only cool task on here"""
 
 
