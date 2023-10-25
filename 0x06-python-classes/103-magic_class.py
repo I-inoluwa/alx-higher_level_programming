@@ -4,7 +4,7 @@ import math
 
 
 class MagicClass:
-    """Magic class.. Writing a class from its bytecode. Pretty cool"""
+    """MagicClass: Writing a class from its bytecode. Pretty cool"""
 
     def __init__(self, radius):
         """I have to put in this documentation too.
