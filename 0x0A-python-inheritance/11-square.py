@@ -44,10 +44,6 @@ class Rectangle(BaseGeometry):
         h = self._Rectangle__height
         return ("[Rectangle] {}/{}".format(w, h))
 
-    def print(self):
-        """Prints the rectangle"""
-        print(self.__str__())
-
 
 class Square(Rectangle):
     """Creates a Square class that inherits directly 4rm the Rectangle class"""
@@ -64,7 +60,3 @@ class Square(Rectangle):
         w = self._Rectangle__width
         h = self._Rectangle__height
         return ("[Square] {}/{}".format(w, h))
-
-    def print(self):
-        """Prints the square"""
-        print(self.__str__())
