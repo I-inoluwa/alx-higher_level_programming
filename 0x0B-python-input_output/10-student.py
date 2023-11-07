@@ -14,9 +14,14 @@ class Student:
     def to_json(self, attrs=None):
         """Public method that retrives a dict repr of a Student instance"""
         serial = {}
-        flag = 0
-        if attrs and type(attrs) == list and type(attrs[0]) == str:
-            flag = 1
+        flag = 1
+        if type(attrs) == list:
+            for each in attrs:
+                if type(each) != str:
+                    flag = 0
+                    break
+        else:
+            flag = 0
         for each in vars(self):
             if flag == 1:
                 if each in attrs:
