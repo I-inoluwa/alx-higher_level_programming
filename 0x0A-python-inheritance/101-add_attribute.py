@@ -4,4 +4,7 @@
 
 def add_attribute(obj, name, value):
     """Adds attribute to an instnace of a class, if possible"""
-    return
+    if hasattr(obj, '__dict__'):
+        setattr(obj, name, value)
+    else:
+        raise TypeError("can't add new attribute")
