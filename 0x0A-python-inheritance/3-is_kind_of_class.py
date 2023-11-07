@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""This documentation is very important"""
+"""This documentation is very necessary"""
 
 
 def is_kind_of_class(obj, a_class):

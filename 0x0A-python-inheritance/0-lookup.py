@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""This documentation is always important"""
+"""This documentation is always necessary"""
 
 
 def lookup(obj):
