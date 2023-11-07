@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-"""This is the documentation for the module. Necessary"""
+"""This is the documentation for the module. Very necessary
+Add more lines
+"""
 
 
 def read_file(filename=""):
