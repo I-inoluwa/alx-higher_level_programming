@@ -5,4 +5,6 @@
 class BaseGeometry:
     """Empty BaseGeometry class. So, no added info yet"""
 
-    pass
+    def __init__(self):
+        """Initialization of an instance of a class"""
+        pass
