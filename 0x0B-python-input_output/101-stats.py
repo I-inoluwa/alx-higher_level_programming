@@ -9,37 +9,36 @@ total = 0
 possible = [200, 301, 400, 401, 403, 404, 405, 500]
 pr_list = {x: 0 for x in possible}
 
-if True:
-    while True:
+try:
+    for _ in range(10000):
         line = input()
         line_arr = line.split("\"GET /projects/260 HTTP/1.1\"")
         if len(line_arr) < 2:
             continue
 
-#         line_arr = line_arr[1].split()
-#         if len(line_arr) < 2:
-#             continue
+        line_arr = line_arr[1].split()
+        if len(line_arr) < 2:
+            continue
 
-#         stc = int(line_arr[0])
-#         fls = int(line_arr[1])
-#         total += fls
-#         if count % 10 == 0:
-#             for each in sorted(pr_list.keys()):
-#                 if pr_list[each] == 0:
-#                     continue
-#                 print(f"{each:d} : {pr_list[each]:d}")
+        stc = int(line_arr[0])
+        fls = int(line_arr[1])
+        total += fls
+        if count % 10 == 0:
+            for each in sorted(pr_list.keys()):
+                if pr_list[each] == 0:
+                    continue
+                print(f"{each:d} : {pr_list[each]:d}")
 
-#             print("File size: {:d}".format(total))
+            print("File size: {:d}".format(total))
 
-#         if stc in possible:
-#             pr_list[stc] += 1
-#         count += 1
+        if stc in possible:
+            pr_list[stc] += 1
+        count += 1
 
-# except KeyboardInterrupt:
-#     # for each in sorted(pr_list.keys()):
-#     #     if pr_list[each] == 0:
-#     #         continue
-#     #     print(f"{each:d} : {pr_list[each]:d}")
+except KeyboardInterrupt:
+    for each in sorted(pr_list.keys()):
+        if pr_list[each] == 0:
+            continue
+        print(f"{each:d} : {pr_list[each]:d}")
 
-#     # print("File size: {:d}".format(total))
-#     pass
+    print("File size: {:d}".format(total))
