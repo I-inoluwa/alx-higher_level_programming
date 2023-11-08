@@ -36,6 +36,9 @@ try:
         count += 1
 
 except Exception:
+    pass
+
+finally:
     for each in sorted(pr_list.keys()):
         if pr_list[each] == 0:
             continue
