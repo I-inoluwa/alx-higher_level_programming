@@ -35,9 +35,6 @@ try:
 
         count += 1
 
-except Exception:
-    pass
-
 finally:
     print("File size: {:d}".format(total))
     for each in sorted(pr_list.keys()):
