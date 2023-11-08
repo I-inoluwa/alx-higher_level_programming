@@ -20,7 +20,10 @@ try:
         if len(line_arr) < 2:
             continue
 
-        stc = int(line_arr[0])
+        try:
+            stc = int(line_arr[0])
+        except ValueError:
+            stc = line_arr[0]
         fls = int(line_arr[1])
         total += fls
 
