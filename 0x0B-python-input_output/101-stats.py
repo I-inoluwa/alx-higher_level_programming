@@ -4,9 +4,6 @@ I honestly do not know what is failing at this point.
 """
 
 
-import sys
-
-
 count = 0
 total = 0
 possible = [200, 301, 400, 401, 403, 404, 405, 500]
