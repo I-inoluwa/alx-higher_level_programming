@@ -9,7 +9,7 @@ total = 0
 possible = [200, 301, 400, 401, 403, 404, 405, 500]
 pr_list = {x: 0 for x in possible}
 
-try:
+if True:
     while True:
         line = input()
         line_arr = line.split("\"GET /projects/260 HTTP/1.1\"")
@@ -35,11 +35,11 @@ try:
 #             pr_list[stc] += 1
 #         count += 1
 
-except KeyboardInterrupt:
-    # for each in sorted(pr_list.keys()):
-    #     if pr_list[each] == 0:
-    #         continue
-    #     print(f"{each:d} : {pr_list[each]:d}")
+# except KeyboardInterrupt:
+#     # for each in sorted(pr_list.keys()):
+#     #     if pr_list[each] == 0:
+#     #         continue
+#     #     print(f"{each:d} : {pr_list[each]:d}")
 
-    # print("File size: {:d}".format(total))
-    pass
+#     # print("File size: {:d}".format(total))
+#     pass
