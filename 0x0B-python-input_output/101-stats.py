@@ -23,6 +23,9 @@ try:
         stc = int(line_arr[0])
         fls = int(line_arr[1])
         total += fls
+
+        if stc in possible:
+            pr_list[stc] += 1
         if count % 10 == 0:
             print("File size: {:d}".format(total))
             for each in sorted(pr_list.keys()):
@@ -30,8 +33,6 @@ try:
                     continue
                 print(f"{each:d} : {pr_list[each]:d}")
 
-        if stc in possible:
-            pr_list[stc] += 1
         count += 1
 
 except Exception:
