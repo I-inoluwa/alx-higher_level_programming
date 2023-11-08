@@ -4,7 +4,7 @@ I honestly do not know what is failing at this point.
 """
 
 
-count = 0
+count = 1
 total = 0
 possible = [200, 301, 400, 401, 403, 404, 405, 500]
 pr_list = {x: 0 for x in possible}
@@ -24,21 +24,22 @@ try:
         fls = int(line_arr[1])
         total += fls
         if count % 10 == 0:
+            print("File size: {:d}".format(total))
             for each in sorted(pr_list.keys()):
                 if pr_list[each] == 0:
                     continue
                 print(f"{each:d} : {pr_list[each]:d}")
 
-            print("File size: {:d}".format(total))
-
         if stc in possible:
             pr_list[stc] += 1
         count += 1
 
+except Exception:
+    pass
+
 finally:
+    print("File size: {:d}".format(total))
     for each in sorted(pr_list.keys()):
         if pr_list[each] == 0:
             continue
         print(f"{each:d} : {pr_list[each]:d}")
-
-    print("File size: {:d}".format(total))
