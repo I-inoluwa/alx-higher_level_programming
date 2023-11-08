@@ -35,7 +35,7 @@ try:
 
         count += 1
 
-finally:
+except Exception:
     print("File size: {:d}".format(total))
     for each in sorted(pr_list.keys()):
         if pr_list[each] == 0:
