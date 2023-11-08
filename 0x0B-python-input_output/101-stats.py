@@ -31,7 +31,7 @@ try:
             for each in sorted(pr_list.keys()):
                 if pr_list[each] == 0:
                     continue
-                print(f"{each:d} : {pr_list[each]:d}")
+                print(f"{each:d}: {pr_list[each]:d}")
 
         count += 1
 
@@ -43,4 +43,4 @@ finally:
     for each in sorted(pr_list.keys()):
         if pr_list[each] == 0:
             continue
-        print(f"{each:d} : {pr_list[each]:d}")
+        print(f"{each:d}: {pr_list[each]:d}")
