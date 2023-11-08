@@ -4,10 +4,10 @@ I honestly do not know what is failing at this point.
 """
 
 
-# count = 0
-# total = 0
-# possible = [200, 301, 400, 401, 403, 404, 405, 500]
-# pr_list = {x: 0 for x in possible}
+count = 0
+total = 0
+possible = [200, 301, 400, 401, 403, 404, 405, 500]
+pr_list = {x: 0 for x in possible}
 
 # try:
 #     while True:
