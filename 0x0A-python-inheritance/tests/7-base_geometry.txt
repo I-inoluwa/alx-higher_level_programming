@@ -1,1 +1,30 @@
-tests
+>>> import sys
+>>> from importlib import import_module
+>>> sys.path.append('..')
+
+>>> module = import_module('7-base_geometry')
+>>> BaseGeometry = module.BaseGeometry
+>>> a = BaseGeometry()
+
+>>> type(a) == BaseGeometry
+True
+
+>>> a.integer_validator("a", "x")
+Traceback (most recent call last):
+TypeError: a must be an integer
+
+>>> a.integer_validator("age", True)
+Traceback (most recent call last):
+TypeError: age must be an integer
+
+>>> a.integer_validator("age", 0)
+Traceback (most recent call last):
+ValueError: age must be greater than 0
+
+>>> a.integer_validator("age", -12)
+Traceback (most recent call last):
+ValueError: age must be greater than 0
+
+>>> a.area()
+Traceback (most recent call last):
+Exception: area() is not implemented
