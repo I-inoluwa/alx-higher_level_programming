@@ -50,6 +50,7 @@ class Square(Rectangle):
 
     def __init__(self, size):
         """Different Initialisation of the square objects"""
+        super().__init__()
         self.integer_validator("size", size)
         self._Square__size = size
         self._Rectangle__height = size
