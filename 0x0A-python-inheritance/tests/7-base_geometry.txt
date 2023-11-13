@@ -9,6 +9,14 @@
 >>> type(a) == BaseGeometry
 True
 
+>>> a.integer_validator() #doctest: +ELLIPSIS
+Traceback (most recent call last):
+TypeError: ... missing 2 required positional arguments: 'name' and 'value'
+
+>>> a.integer_validator("name") #doctest: +ELLIPSIS
+Traceback (most recent call last):
+TypeError: ... missing 1 required positional argument: 'value'
+
 >>> a.integer_validator("a", 2)
 
 >>> a.integer_validator("a", "x")
