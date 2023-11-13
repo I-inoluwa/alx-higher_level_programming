@@ -2,7 +2,6 @@
 """Module for creating an empty class, with a strange method."""
 
 
-BaseGeometry = __import__('7-base_geometry').BaseGeometry
 Rectangle = __import__('9-rectangle').Rectangle
 
 
