@@ -14,5 +14,9 @@
 True
 >>> issubclass(MyList, list)
 True
->>> a.append(2)
-[4, 3, 1, 5, 2]
+>>> a.append(-2)
+>>> a.print_sorted() == None
+[-2, 1, 3, 4, 5]
+True
+>>> a.__str__() == "[4, 3, 1, 5, -2]"
+True
