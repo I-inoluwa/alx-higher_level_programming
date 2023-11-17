@@ -11,11 +11,10 @@ class Rectangle(Base):
     def __init__(self, width, height, x=0, y=0, id=None):
         """Initialisation of the Rectangle class"""
         super().__init__(id=id)
-        if (type(width) != int) or (type(height) != int):
-            raise TypeError("All arguments must be of integer type")
-
-        if (type(x) != int) or (type(y) != int):
-            raise TypeError("All arguments must be of integer type")
+        self.__validate_non_negative_integer("width", width)
+        self.__validate_non_negative_integer("height", height)
+        self.__validate_non_negative_integer("x", x)
+        self.__validate_non_negative_integer("y", y)
 
         self._Rectangle__width = width
         self._Rectangle__height = height
@@ -74,5 +73,8 @@ class Rectangle(Base):
         """Validates that the value is a non-negative integer."""
         if type(value) != int:
             raise TypeError(f"{name} must be an integer")
+        if value <= 0:
+            if (name == "width" or name == "height"):
+                raise ValueError(f"{name} must be > 0")
         if value < 0:
             raise ValueError(f"{name} must be >= 0")
