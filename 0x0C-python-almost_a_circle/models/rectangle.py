@@ -94,3 +94,9 @@ class Rectangle(Base):
         """Returns a string literal of the class"""
         return (f"[Rectangle] ({self.id:d}) {self.x:d}/{self.y:d} \
 - {self.width}/{self.height}")
+
+    def update(self, *args):
+        """Updates all values of all the arguments"""
+        arr = "id width height x y".split()
+        for i, each in enumerate(args):
+            setattr(self, arr[i], each)
