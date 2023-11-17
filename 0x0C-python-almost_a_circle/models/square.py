@@ -20,12 +20,9 @@ class Square(Rectangle):
     @size.setter
     def size(self, value):
         """Sets the width of the rectangle with a value."""
-        self.__validate_non_negative_integer("width", value)
+        self._Rectangle__validate_non_negative_integer("width", value)
         self._Rectangle__width = value
         return (value)
-
-    # def __validate_non_negative_integer(self, name, value):
-    #     super()._Rectangle__validate_non_negative_integer(name, value)
 
     def __str__(self):
         """Returns a string literal of the class"""
