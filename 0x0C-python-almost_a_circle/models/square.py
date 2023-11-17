@@ -24,8 +24,8 @@ class Square(Rectangle):
         self._Rectangle__width = value
         return (value)
 
-    def __validate_non_negative_integer(self, name, value):
-        super()._Rectangle__validate_non_negative_integer(name, value)
+    # def __validate_non_negative_integer(self, name, value):
+    #     super()._Rectangle__validate_non_negative_integer(name, value)
 
     def __str__(self):
         """Returns a string literal of the class"""
