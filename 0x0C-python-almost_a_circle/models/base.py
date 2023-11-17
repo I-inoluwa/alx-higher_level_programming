@@ -35,6 +35,5 @@ class Base:
         json_repr = cls.to_json_string(arr)
 
         filename = f"{str(cls).split('.')[2][:-2]}.json"
-        print(filename)
         with open(filename, mode='w', encoding='utf-8') as f:
             f.write(json_repr)
