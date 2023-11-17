@@ -17,57 +17,57 @@ class Rectangle(Base):
         if (type(x) != int) or (type(y) != int):
             raise TypeError("All arguments must be of integer type")
 
-        self.__width = width
-        self.__height = height
-        self.__x = x
-        self.__y = y
+        self._Rectangle__width = width
+        self._Rectangle__height = height
+        self._Rectangle__x = x
+        self._Rectangle__y = y
 
     @property
     def width(self):
         """retrieves the width of the rectangle"""
-        return (self.__width)
+        return (self._Rectangle__width)
 
     @width.setter
     def width(self, value):
         """Sets the width of the rectangle with a value."""
         self.__validate_non_negative_integer(self, "width", value)
-        self.__width = value
+        self._Rectangle__width = value
         return (value)
 
     @property
     def height(self):
         """retrieves the height of the rectangle"""
-        return (self.__height)
+        return (self._Rectangle__height)
 
     @height.setter
     def height(self, value):
         """Sets the height of the rectangle with a value."""
         self.__validate_non_negative_integer(self, "height", value)
-        self.__height = value
+        self._Rectangle__height = value
         return (value)
 
     @property
     def x(self):
         """retrieves the x of the rectangle"""
-        return (self.__x)
+        return (self._Rectangle__x)
 
     @x.setter
     def x(self, value):
         """Sets the x of the rectangle with a value."""
         self.__validate_non_negative_integer(self, "x", value)
-        self.__x = value
+        self._Rectangle__x = value
         return (value)
 
     @property
     def y(self):
         """retrieves the y of the rectangle"""
-        return (self.__y)
+        return (self._Rectangle__y)
 
     @y.setter
     def y(self, value):
         """Sets the y of the rectangle with a value."""
         self.__validate_non_negative_integer(self, "y", value)
-        self.__y = value
+        self._Rectangle__y = value
         return (value)
 
     def __validate_non_negative_integer(self, name, value):
