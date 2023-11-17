@@ -29,10 +29,12 @@ class Base:
     def save_to_file(cls, list_objs):
         """Writes the JSON string repr of list_objs to a file"""
         arr = []
-        for each in list_objs:
-            arr.append(each.to_dictionary())
+        if list_objs:
+            for each in list_objs:
+                arr.append(each.to_dictionary())
         json_repr = cls.to_json_string(arr)
 
-        filename = f"{str(list_objs[0]).split()[0][1:-1]}.json"
+        filename = f"{str(cls).split('.')[2][:-2]}.json"
+        print(filename)
         with open(filename, mode='w', encoding='utf-8') as f:
             f.write(json_repr)
