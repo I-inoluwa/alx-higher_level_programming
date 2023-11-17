@@ -20,7 +20,7 @@ class Square(Rectangle):
     @size.setter
     def size(self, value):
         """Sets the width of the rectangle with a value."""
-        self.__validate_non_negative_integer("size", value)
+        self.__validate_non_negative_integer("width", value)
         self._Rectangle__width = value
         return (value)
 
