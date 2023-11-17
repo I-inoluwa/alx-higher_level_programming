@@ -95,8 +95,12 @@ class Rectangle(Base):
         return (f"[Rectangle] ({self.id:d}) {self.x:d}/{self.y:d} \
 - {self.width}/{self.height}")
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """Updates all values of all the arguments"""
         arr = "id width height x y".split()
-        for i, each in enumerate(args):
-            setattr(self, arr[i], each)
+        if args:
+            for i, each in enumerate(args):
+                setattr(self, arr[i], each)
+        else:
+            for key, value in kwargs.items():
+                setattr(self, str(key), value)
