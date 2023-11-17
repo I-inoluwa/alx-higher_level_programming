@@ -30,7 +30,7 @@ class Rectangle(Base):
     @width.setter
     def width(self, value):
         """Sets the width of the rectangle with a value."""
-        self.__validate_non_negative_integer(self, "width", value)
+        self.__validate_non_negative_integer("width", value)
         self._Rectangle__width = value
         return (value)
 
@@ -42,7 +42,7 @@ class Rectangle(Base):
     @height.setter
     def height(self, value):
         """Sets the height of the rectangle with a value."""
-        self.__validate_non_negative_integer(self, "height", value)
+        self.__validate_non_negative_integer("height", value)
         self._Rectangle__height = value
         return (value)
 
@@ -54,7 +54,7 @@ class Rectangle(Base):
     @x.setter
     def x(self, value):
         """Sets the x of the rectangle with a value."""
-        self.__validate_non_negative_integer(self, "x", value)
+        self.__validate_non_negative_integer("x", value)
         self._Rectangle__x = value
         return (value)
 
@@ -66,7 +66,7 @@ class Rectangle(Base):
     @y.setter
     def y(self, value):
         """Sets the y of the rectangle with a value."""
-        self.__validate_non_negative_integer(self, "y", value)
+        self.__validate_non_negative_integer("y", value)
         self._Rectangle__y = value
         return (value)
 
