@@ -37,3 +37,10 @@ class Base:
         filename = f"{str(cls).split('.')[2][:-2]}.json"
         with open(filename, mode='w', encoding='utf-8') as f:
             f.write(json_repr)
+
+    @staticmethod
+    def from_json_string(json_string):
+        """Returns the list of the JSON string representation."""
+        if json_string:
+            return (json.loads(json_string))
+        return ([])
