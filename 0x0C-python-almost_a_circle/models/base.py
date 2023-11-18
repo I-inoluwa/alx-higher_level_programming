@@ -3,6 +3,7 @@
 
 
 import json
+import csv
 
 
 class Base:
@@ -72,3 +73,44 @@ class Base:
             instance_out.append(cls.create(**each))
 
         return instance_out
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        """Saves a list of objects to a CSV file"""
+        filename = f"{str(cls).split('.')[2][:-2]}.csv"
+        k = {"id": 0, "width": 1, "size": 1, "height": 2, "x": 3, "y": 4}
+        with open(filename, mode='w', newline='') as f:
+            cnt = csv.writer(f)
+            for each in list_objs:
+                d_each = each.to_dictionary()
+                tmp = [d_each[x] for x in sorted(d_each, key=lambda x: k[x])]
+                cnt.writerow(tmp)
+
+    @classmethod
+    def load_from_file_csv(cls):
+        """Loads a list of objects from a CSV file"""
+        filename = f"{str(cls).split('.')[2][:-2]}.csv"
+        obj_list = []
+        rect = "id width height x y".split()
+        sqre = "id size x y".split()
+        try:
+            with open(filename, mode='r') as csv_file:
+                content = csv.reader(csv_file)
+                for each in content:
+                    # if str(cls).split('.')[2][:-2] == "Rectangle":
+                    new_dict = {}
+                    if cls.__name__ == 'Rectangle':
+                        dummy = cls(1, 1)
+                        for i, key in enumerate(rect):
+                            new_dict[key] = int(each[i])
+                    elif cls.__name__ == 'Square':
+                        dummy = cls(1)
+                        for i, key in enumerate(sqre):
+                            new_dict[key] = int(each[i])
+
+                    dummy.update(**new_dict)
+                    obj_list.append(dummy)
+        except FileNotFoundError:
+            pass
+
+        return obj_list
