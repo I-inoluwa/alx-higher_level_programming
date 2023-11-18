@@ -44,3 +44,14 @@ class Base:
         if json_string:
             return (json.loads(json_string))
         return ([])
+
+    @classmethod
+    def create(cls, **dictionary):
+        """returns an instance with all the attributes already set"""
+        if str(cls).split('.')[2][:-2] == "Rectangle":
+            dummy = cls(1, 1)
+        else:
+            dummy = cls(1)
+
+        dummy.update(**dictionary)
+        return (dummy)
